@@ -32,11 +32,13 @@ This guide will help you deploy your LectureLens project to Vercel.
 1. Go to https://vercel.com and sign in
 2. Click "Add New Project"
 3. Import your GitHub repository
-4. Vercel will auto-detect Next.js settings:
-   - **Framework Preset**: Next.js
-   - **Build Command**: `npm run build` (auto-detected)
-   - **Output Directory**: `out` (for static export)
-   - **Install Command**: `npm install` (auto-detected)
+4. Configure Vercel settings:
+   - **Framework Preset**: Other (or leave blank - Vercel will auto-detect)
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `out`
+   - **Install Command**: `npm install`
+   
+   ⚠️ **Important**: Do NOT select "Next.js" as the framework preset. Since you're using static export (`output: 'export'`), Vercel should treat it as a static site, not a Next.js server app.
 
 5. **Important**: Add Environment Variable:
    - Go to "Environment Variables" section
